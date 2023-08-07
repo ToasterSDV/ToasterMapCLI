@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+		<PublishSingleFile>true</PublishSingleFile>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    </PropertyGroup>
+
+	<Import Project="targets/find-game-folder.targets"/>
+
+    <ItemGroup>
+      <PackageReference Include="Platonymous.TMXTile" Version="1.5.9" />
+    </ItemGroup>
+
+	<!--<ItemGroup>
+		--> <!--<Reference Include="xTile">
+			<HintPath>../../libs/xTile.dll</HintPath>
+			<Private>true</Private>
+			<CopyLocal>true</CopyLocal>
+		</Reference>--><!--
+		<Reference Include="xTile">
+			<HintPath>"C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\xTile.dll"</HintPath>
+			<Private>False</Private>
+			<SpecificVersion>False</SpecificVersion>		
+		</Reference>
+		
+		--><!--<Reference Include="TMXTile" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\smapi-internal\TMXTile.dll" />--><!--
+	</ItemGroup>-->
+	<ItemGroup>
+		<Reference Include="MonoGame.Framework" HintPath="$(GamePath)\MonoGame.Framework.dll" Private="False" />
+		<Reference Include="xTile" HintPath="$(GamePath)\xTile.dll" />
+	</ItemGroup>
+    
+</Project>

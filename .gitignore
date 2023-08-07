@@ -1,0 +1,6 @@
+-libs/
+Python/
+.vs/
+obj/
+bin/
+bin/**/*.pdb
